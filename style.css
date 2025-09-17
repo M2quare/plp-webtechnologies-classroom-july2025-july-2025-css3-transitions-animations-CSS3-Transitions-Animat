@@ -1,0 +1,50 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Button hover transition */
+#animateBtn {
+  padding: 12px 24px;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.5s ease;
+}
+#animateBtn:hover {
+  background: dodgerblue;
+}
+
+/* Box to animate */
+#box {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  margin: 40px auto;
+  transition: transform 1s ease;
+}
+#box.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Modal with animation */
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+#modal.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.hidden { display: none; }
